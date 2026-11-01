@@ -1,0 +1,71 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>SkyCast | Weather Forecast</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <!-- HEADER -->
+    <header>
+      <a href="#current" class="logo">SKY<span>CAST</span></a>
+      <form id="search-form">
+        <input
+          type="text"
+          id="city-input"
+          placeholder="Search any city..."
+          required
+        />
+        <button type="submit">Search</button>
+      </form>
+      <button type="button" id="unit-btn" class="unit-btn">Switch to °F</button>
+    </header>
+
+    <main>
+      <p id="message"></p>
+
+      <!-- CURRENT WEATHER -->
+      <section id="current">
+        <div class="current-card">
+          <div class="current-left">
+            <h1 id="city">--</h1>
+            <p id="date">--</p>
+            <p id="desc">--</p>
+          </div>
+          <div class="current-right">
+            <div id="icon" class="icon">☀️</div>
+            <div id="temp" class="temp">--</div>
+          </div>
+        </div>
+        <div class="details">
+          <div class="detail">
+            <span>Feels like</span><strong id="feels">--</strong>
+          </div>
+          <div class="detail">
+            <span>Humidity</span><strong id="humidity">--</strong>
+          </div>
+          <div class="detail">
+            <span>Wind</span><strong id="wind">--</strong>
+          </div>
+        </div>
+      </section>
+
+      <!-- HOURLY -->
+      <section id="hourly">
+        <h2>Next 24 Hours</h2>
+        <div class="hourly-row" id="hourly-row"></div>
+      </section>
+
+      <!-- 7 DAY -->
+      <section id="daily">
+        <h2>7-Day Forecast</h2>
+        <div class="daily-grid" id="daily-grid"></div>
+      </section>
+    </main>
+
+    <footer>© 2026 SkyCast. Weather data by Open-Meteo.com</footer>
+
+    <script src="script.js"></script>
+  </body>
+</html>
